@@ -1,0 +1,113 @@
+@import "./media/queries.css";
+@import "./base.css";
+
+/* Background color of the main page */
+/* Container for the background image */
+body {
+  background-color: #171515; /* Color in HEX value */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Main content styling */
+body .content {
+  position: relative;
+  z-index: 1;
+  /* Other styles for content */
+}
+
+/* Background image with reduced opacity */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/bg.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; /* Set opacity */
+  z-index: 0;
+}
+
+/**/
+/* How the main wrapper is being styled */
+#app {
+  max-width: 1280px; /* Color of the box in HEX value */
+  margin: 0 auto; /* Placement of the box */
+  padding: 3rem; /* Padding width of the box */
+  border-radius: 1rem; /* Radius of the box's edges */
+  background-color: #272626; /* Background color of the box */
+  opacity: 1;
+}
+
+/* How the profile pic are being styled */
+.profile-pic {
+  display: block; /* Element behavior*/
+  margin: 0 auto 1.5rem; /* Placement of the profile pic*/
+  border-radius: 100%; /* Radius of the profile pic wrapper */
+}
+
+.tag {
+  font-weight: 500; /* Font weight type */
+  font-size: 2.6rem; /* Font size */
+  position: relative; /* Element position */
+  top: -10px; /* Element location */
+}
+
+.sub-title {
+  font-size: 1.2rem; /* Font size */
+}
+
+.greetings {
+  width: 100%; /* Width of the container*/
+}
+
+.greetings h1,
+.greetings h3 {
+  text-align: center; /* Text placement or location */
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
